@@ -1,3 +1,22 @@
 import User from "../model/User";
 
-//23:57
+const getAllUser = async(req, res, next) => {
+
+    let users;
+    
+    try{
+        users = await User.find();
+    } catch(err) {
+        console.log(err);
+    }
+
+    if(!users)
+    {
+        return res.status(404).json("No Users found");
+    }
+
+    return res.status(200).json({users});
+
+};
+
+export default getAllUser;
