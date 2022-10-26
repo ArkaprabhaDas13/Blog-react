@@ -1,6 +1,5 @@
 import User from "../model/User";
-
-const getAllUser = async(req, res, next) => {
+ export const  getAllUser = async(req, res, next) => {
 
     let users;
     
@@ -19,4 +18,4 @@ const getAllUser = async(req, res, next) => {
 
 };
 
-export default getAllUser;
+// export getAllUser;
