@@ -39,7 +39,8 @@ export const  signup =async(req,res,next)=>{
     let user = new User({
         name,
         email,                  // If the user doesnot exist , create a new schema 
-        password:hashPassword
+        password:hashPassword,
+        blogs:[]
     })
 
     
@@ -78,6 +79,7 @@ export const login = async(req, res, next)=>{
     return res.status(200).json({message:"Successful Login"});
     
 }
+
 
 
 // export getAllUser;
